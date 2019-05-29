@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Deploy\Service\Bundle">
+        <plugin name="generate_smart_bundle" type="Hevelop\SmartBundling\Service\Bundle"/>
+    </type>
+    <type name="Magento\Deploy\Package\BundleInterface">
+        <plugin name="separate_bundle_on_right_time" type="Hevelop\SmartBundling\Bundle\RequireJs"/>
+    </type>
+    <type name="Hevelop\SmartBundling\Model\Config\Data">
+        <arguments>
+            <argument name="reader" xsi:type="object">Hevelop\SmartBundling\Model\Config\Reader\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Asset\ConfigInterface">
+        <plugin name="if_smart_bundle_disable_classic_one" type="Hevelop\SmartBundling\Plugin\DisableMagentoBundling"/>
+        <plugin name="if_smart_bundle_disable_js_merge" type="Hevelop\SmartBundling\Plugin\DisableMagentoJsMerge"/>
+    </type>
+</config>
