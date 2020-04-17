@@ -9,7 +9,12 @@ class Reader extends \Magento\Framework\Config\Reader\Filesystem
      *
      * @var array
      */
-    protected $_idAttributes = ['/config/action' => 'name'];
+    protected $_idAttributes = [
+        '/config/area' => 'name',
+        '/config/area/theme' => 'name',
+        '/config/area/theme/action' => 'name',
+        '/config/area/theme/shared'
+    ];
 
     /**
      * Construct the FileSystem Reader Class
