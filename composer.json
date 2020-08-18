@@ -2,10 +2,10 @@
   "name": "hevelop/smart-bundling",
   "description": "Hevelop Smart Bundling",
   "require": {
-    "magento/framework": "101.0.*"
+    "magento/framework": "^101.0.0"
   },
   "type": "magento2-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": [
     "OSL-3.0"
   ],
