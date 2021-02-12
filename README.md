@@ -6,6 +6,7 @@ by pages (cms-index-index, catalog-category-view, catalog-product-view, etc).
 
 Installation
 -------------
+Only need a refresher?
 1. Add the module to your project (and enable it!);
 2. Set the following config:
    - dev/js/enable_smart_bundling = 1
@@ -21,6 +22,9 @@ Installation
     - `<file>js/{fileName}.js</file>`
 9. E' possibile inserire anche file che nel branch attuale non ci sono, ma che poi facendo il merge in stg o prd ci saranno.
     - Se lo smart_bundling non trova il file, non lo inserisce.
+
+Need a deeper guide?
+[Read the Extended Guide](ExtendedGuide.md)
 
 Configuration of the bundles
 -----------------------------
